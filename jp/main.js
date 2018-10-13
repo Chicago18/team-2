@@ -32,6 +32,28 @@ files = {
  }
 
 $(document).ready(function(){
+    $("#searchTerm").on("input", function(){
+        var term = $('#searchTerm').val().toLowerCase();
+        var searchResults = [];
+          $.each(files, function( index, value ){
+          if(value.title.toLowerCase().indexOf(term) >= 0){
+            searchResults.push([value.title, value.link]);
+          }else if(value.description.toLowerCase().indexOf(term) >= 0){
+            searchResults.push([value.title, value.link]);
+          }else if($.inArray(term, value.tags)!= -1){
+            searchResults.push([value.title, value.link]);
+          }
+        });
+        var res = "";
+        $.each(searchResults, function(index, value){
+          res += '<div class = "result"><a href="'+ value[1] + '">'+value[0]+'</a></div>';
+        });
+        if(!$("#searchTerm").val()){
+            res = "";
+        };
+        $(".resultList").html(res);
+    });
+      
 	var allCards = '';
 	$.each(files, function( index, value ){
 		var newCard = '';
@@ -44,3 +66,4 @@ $(document).ready(function(){
 	});
 	$(".file-cards").html(allCards);
 });
+
