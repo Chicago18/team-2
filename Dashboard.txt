@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <style>
+
+body { margin: 0; font-size: 28px; font-family: Arial, Helvetica, sans-serif; }.header { background-color: #D5F0FE; padding: 30px; text-align: center; }#navbar { overflow: hidden; background-color: #333; }#navbar a { float: left; display: block; color: #f2f2f2; text-align: center; padding: 14px 16px; text-decoration: none; font-size: 17px; }#navbar a:hover { background-color: #ddd; color: black; }#navbar a.active { background-color: #3349FF; color: white; }.content { padding: 16px; }.sticky { position: fixed; top: 0; width: 100%; }.sticky + .content { padding-top: 60px; }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>.card {    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);    transition: 0.3s;    width: 40%;}.card:hover {    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);}.container {    padding: 2px 16px;}</style><style>* {    box-sizing: border-box;}.column {    float: left;    width: 33.33%;    padding: 5px;}/* Clearfix (clear floats) */.row::after {    content: "";    clear: both;    display: table;}</style><style>hr {    clear: both;    visibility: hidden;}</style><style>.chip {    display: inline-block;    padding: 0 25px;    height: 50px;    font-size: 18px;    line-height: 50px;    border-radius: 25px;    background-color: #f1f1f1;}.chip img {    float: left;    margin: 0 10px 0 -25px;    height: 50px;    width: 50px;    border-radius: 50%;}.closebtn {    padding-left: 10px;    color: #888;    font-weight: bold;    float: right;    font-size: 20px;    cursor: pointer;}.closebtn:hover {    color: #000;}</style>
+
+<style>body {    font-family: "Lato", sans-serif;}.sidepanel  {    width: 0;    position: absolute;    z-index: 1;    height: 450px;    top: 0;    right: 0;    background-color: #111;    overflow-x: hidden;    transition: 0.5s;    margin-top: 230px;}.sidepanel a {    padding: 8px 8px 8px 32px;    text-decoration: none;    font-size: 25px;    color: #818181;    display: block;    transition: 0.3s;}.sidepanel a:hover {    color: #f1f1f1;}.sidepanel .closebtn {    position: absolute;    top: 0;    right: 25px;    font-size: 36px;}.openbtn {    font-size: 20px;    cursor: pointer;    background-color: #111;    color: white;    padding: 10px 15px;    border: none;}.openbtn:hover {    background-color:#444;}</style>
+
+  
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+  </style>
+  
+  <style>
+
+body { margin: 0; font-size: 28px; font-family: Arial, Helvetica, sans-serif; }.header { background-color: #D5F0FE; padding: 30px; text-align: center; }#navbar { overflow: hidden; background-color: #333; }#navbar a { float: left; display: block; color: #f2f2f2; text-align: center; padding: 14px 16px; text-decoration: none; font-size: 17px; }#navbar a:hover { background-color: #ddd; color: black; }#navbar a.active { background-color: #3349FF; color: white; }.content { padding: 16px; }.sticky { position: fixed; top: 0; width: 100%; }.sticky + .content { padding-top: 60px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <center><img src="OutandEqualLogo.png"></center>
+  <br>
+</div>
+
+<div id="navbar">
+  <a class="active" href="javascript:void(0)">Home</a>
+  <a href="javascript:void(0)">News</a>
+  <a href="javascript:void(0)">Map</a>
+  <a href="file:///C:/Users/gwcp/Documents/GitHub/team-2/ProfilePage.html">My Profile</a>
+</div>
+
+<nav class="navbar navbar-inverse visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    
+    <br>
+    
+    <div class="col-sm-9">
+      <div class="well">
+        <h4>Dashboard</h4>
+        <p>
+		<div class="card">
+  <img src="ProfilePic.png" alt="Avatar" style="width:30%">
+  <div class="container">
+    <font size = "5"><b>User/Organization Name</b>
+    <p>124 4th St Northwest</p>
+	<p>contactme@here.org</p></font>
+  </div>
+
+ <br>
+</div>
+		
+		</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Connections</h4>
+            <p>
+	<div class="chip">
+  <img src="Icon.png" alt="Person" width="40" height="40">
+  Contact 1
+  <span class="closebtn" onclick="this.parentElement.style.display='none'"></span>
+</div>
+
+<div class="chip">
+  <img src="Icon.png" alt="Person" width="40" height="40">
+  Contact 2
+  <span class="closebtn" onclick="this.parentElement.style.display='none'"></span>
+</div>
+
+<div class="chip">
+  <img src="Icon.png" alt="Person" width="40" height="40">
+  Contact 3
+  <span class="closebtn" onclick="this.parentElement.style.display='none'"></span>
+</div>
+			
+			</p> 
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Recent Activity</h4>
+            <p>
+			<div class="chip">
+  <img src="ERG.png" alt="Person" width="45" height="45">
+  ERG A
+  <span class="closebtn" onclick="this.parentElement.style.display='none'"></span>
+</div>
+
+<div class="chip">
+  <img src="ERG.png" alt="Person" width="45" height="45">
+  ERG B
+  <span class="closebtn" onclick="this.parentElement.style.display='none'"></span>
+</div>
+
+<div class="chip">
+  <img src="ERG.png" alt="Person" width="45" height="45">
+  ERG C
+  <span class="closebtn" onclick="this.parentElement.style.display='none'"></span>
+</div>
+				
+			</p> 
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Lessons and Resources</h4>
+            <p>
+			<div class="chip">
+  <img src="NewsPic.png" alt="Person" width="45" height="45">
+  Lesson 1
+  <span class="closebtn" onclick="this.parentElement.style.display='none'"></span>
+</div>
+
+<div class="chip">
+  <img src="NewsPic.png" alt="Person" width="45" height="45">
+  Lesson 2
+  <span class="closebtn" onclick="this.parentElement.style.display='none'"></span>
+</div>
+
+<div class="chip">
+  <img src="NewsPic.png" alt="Person" width="45" height="45">
+  Lesson 3
+  <span class="closebtn" onclick="this.parentElement.style.display='none'"></span>
+</div>
+			
+			
+			</p> 
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Your Status</h4>
+            <center><p>3-Year Member</p></center>
+			<center><img src="smile.png" width="65" height="65"></center>
+			<center><p> 9.5/10 Rating</p></center>
+          </div>
+        </div>
+      </div>
+      
+
+</body>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+</html>
