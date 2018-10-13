@@ -26,7 +26,10 @@
         "url": "https://github.com/BlackrockDigital/startbootstrap-scrolling-nav.git"
     },
     "dependencies": {
+        "aylien_textapi": "^0.7.0",
         "bootstrap": "4.1.1",
+        "cors": "^2.8.4",
+        "express": "^4.16.4",
         "jquery": "3.3.1",
         "jquery.easing": "^1.4.1"
     },
