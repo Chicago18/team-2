@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
   Image,
   Platform,
@@ -12,9 +12,18 @@ import { WebBrowser } from 'expo';
 
 import { MonoText } from '../components/StyledText';
 
-import { SearchBar } from 'react-native-elements';
+import SearchInput, { createFilter } from 'react-native-search-filter';
 
 export default class HomeScreen extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchTerm: ''
+    }
+  }
+  searchUpdated(term) {
+    this.setState({ searchTerm: term })
+  }
   static navigationOptions = {
     header: null,
   };
@@ -34,6 +43,11 @@ export default class HomeScreen extends React.Component {
             />
           </View>
 
+          <SearchInput
+            onChangeText={(term) => { this.searchUpdated(term)}}
+            style = {styles.searchInput}
+            placeholder="Search"/>
+          
           <View style={styles.getStartedContainer}>
             {this._maybeRenderDevelopmentModeWarning()}
 
@@ -47,14 +61,6 @@ export default class HomeScreen extends React.Component {
               Change this text and your app will automatically reload.
             </Text>
           </View>
-
-          <SearchBar
-            round
-            lightTheme
-            showLoading
-            platform="ios"
-            cancelButtonTitle="Cancel"
-            placeholder='Search' />
 
           <View style={styles.helpContainer}>
             <TouchableOpacity onPress={this._handleHelpPress} style={styles.helpLink}>
@@ -112,6 +118,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+  },
+  searchInput: {
+    padding: 10,
+    borderColor: '#CCC',
+    borderWidth: 1
   },
   developmentModeText: {
     marginBottom: 20,
