@@ -17,6 +17,7 @@ body { margin: 0; font-size: 28px; font-family: Arial, Helvetica, sans-serif; }.
   <a class="active" href="javascript:void(0)">Home</a>
   <a href="javascript:void(0)">News</a>
   <a href="javascript:void(0)">Map</a>
+  <a href="javascript:void(0)">Map</a>
   <a href="file:///C:/Users/gwcp/Documents/GitHub/team-2/ProfilePage.html">My Profile</a>
 </div>
 
