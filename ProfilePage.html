@@ -1,83 +1,15 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
 body { margin: 0; font-size: 28px; font-family: Arial, Helvetica, sans-serif; }.header { background-color: #D5F0FE; padding: 30px; text-align: center; }#navbar { overflow: hidden; background-color: #333; }#navbar a { float: left; display: block; color: #f2f2f2; text-align: center; padding: 14px 16px; text-decoration: none; font-size: 17px; }#navbar a:hover { background-color: #ddd; color: black; }#navbar a.active { background-color: #3349FF; color: white; }.content { padding: 16px; }.sticky { position: fixed; top: 0; width: 100%; }.sticky + .content { padding-top: 60px; }
 </style>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.card {
-  box-shadow: 0 14px 12px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  max-length: 50px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-}
 
-.title {
-  color: grey;
-  font-size: 18px;
-}
-
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
-}
-
-button:hover, a:hover {
-  opacity: 0.7;
-}
-</style>
-
-<style>
-.chip {
-    display: inline-block;
-    padding: 0 25px;
-    height: 50px;
-    font-size: 18px;
-    line-height: 50px;
-    border-radius: 25px;
-    background-color: #f1f1f1;
-}
-
-.chip img {
-    float: left;
-    margin: 0 10px 0 -25px;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-}
-
-.closebtn {
-    padding-left: 10px;
-    color: #888;
-    font-weight: bold;
-    float: right;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.closebtn:hover {
-    color: #000;
-}
-</style>
+<style>.card {    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);    transition: 0.3s;    width: 40%;}.card:hover {    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);}.container {    padding: 2px 16px;}</style><style>* {    box-sizing: border-box;}.column {    float: left;    width: 33.33%;    padding: 5px;}/* Clearfix (clear floats) */.row::after {    content: "";    clear: both;    display: table;}</style><style>hr {    clear: both;    visibility: hidden;}</style><style>.chip {    display: inline-block;    padding: 0 25px;    height: 50px;    font-size: 18px;    line-height: 50px;    border-radius: 25px;    background-color: #f1f1f1;}.chip img {    float: left;    margin: 0 10px 0 -25px;    height: 50px;    width: 50px;    border-radius: 50%;}.closebtn {    padding-left: 10px;    color: #888;    font-weight: bold;    float: right;    font-size: 20px;    cursor: pointer;}.closebtn:hover {    color: #000;}</style>
 
 </head>
 <body>
@@ -113,20 +45,15 @@ button:hover, a:hover {
   Contact 3
   <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
 </div>
-<br>
-<br>
-<div class="card">
-  <img src="ProfilePic.png" alt="John" style="width:95%">
-  <h1>User</h1>
-  <p class="title">User Title</p>
-  <p>User Organization</p>
-  <div style="margin: 24px 0;">
-    <a href="#"><i class="fa fa-dribbble"></i></a> 
-    <a href="#"><i class="fa fa-twitter"></i></a>  
-    <a href="#"><i class="fa fa-linkedin"></i></a>  
-    <a href="#"><i class="fa fa-facebook"></i></a> 
- </div>
- <p><button>Contact Info</button></p>
+
+<hr>
+<center><div class="card">
+  <img src="ProfilePic.png" alt="Avatar" style="width:50%">
+  <div class="container">
+    <b>Username</b> 
+    <p>Organization Name</p> 
+  </div></center>
+
  <br>
 </div>
 
