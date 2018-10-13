@@ -12,12 +12,14 @@ import { WebBrowser } from 'expo';
 
 import { MonoText } from '../components/StyledText';
 
+import { SearchBar } from 'react-native-elements';
+
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null,
   };
 
-  render() {
+  render() { 
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
@@ -45,6 +47,14 @@ export default class HomeScreen extends React.Component {
               Change this text and your app will automatically reload.
             </Text>
           </View>
+
+          <SearchBar
+            round
+            lightTheme
+            showLoading
+            platform="ios"
+            cancelButtonTitle="Cancel"
+            placeholder='Search' />
 
           <View style={styles.helpContainer}>
             <TouchableOpacity onPress={this._handleHelpPress} style={styles.helpLink}>
