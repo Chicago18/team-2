@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Info Windows</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <script>
+
+      function initMap() {
+        var labels = ['Chase', 'Theatre Chicago', 'Pride March'];
+        var green_marker = 'http://maps.google.com/mapfiles/ms/icons/green-dot.png';
+        var red_marker = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png';
+        var chasetowers = {lat: 41.881972, lng: -87.629473};
+        var chicagotheatre = {lat:   41.885598, lng: -87.627917};
+        var pride_march = {lat: 41.878143, lng: -87.635151};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: chasetowers
+        });
+
+        var contentString = 'lorem ipsum';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        var infowindow2 = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        var chasetowers_marker = new google.maps.Marker({
+          position: chasetowers,
+          label: labels[0],
+          map: map
+        });
+
+        var chicagotheatre_marker = new google.maps.Marker({
+          position: chicagotheatre,
+          label: labels[1],
+          map: map
+        });
+
+        var lolla = new google.maps.Marker({
+          position: lolla,
+          label: labels[2],
+          map: map
+        });
+
+        var type_of_marker = {
+          chasetowers_marker: "ERG",
+          chicagotheatre_marker: "ERG",
+
+        };
+
+
+        chicagotheatre_marker.icon = green_marker;
+
+        chasetowers_marker.addListener('click', function() {
+          infowindow.open(map, chasetowers_marker);
+        });
+
+        chicagotheatre_marker.addListener('click', function() {
+          infowindow2.open(map, chicagotheatre_marker);
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA11iw8jmKHyYb0o_OH7bDS5iH1CJYynz8&callback=initMap">
+    </script>
+  </body>
+</html>
